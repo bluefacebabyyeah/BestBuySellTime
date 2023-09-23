@@ -9,15 +9,24 @@
         android:id="@+id/historyFragment2"
         android:name="com.example.bestbuyselltime.HistoryFragment"
         android:label="fragment_market"
-        tools:layout="@layout/fragment_history"/>
-    <fragment
-        android:id="@+id/instruments"
-        android:name="com.example.bestbuyselltime.Tools"
-        android:label="fragment_instruments"
-        tools:layout="@layout/fragment_instruments" />
+        tools:layout="@layout/fragment_history">
+        <action
+            android:id="@+id/action_historyFragment2_to_closePositionFragment"
+            app:destination="@id/closePositionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment3"
         android:name="com.example.bestbuyselltime.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main"/>
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="com.example.bestbuyselltime.MarketFragment"
+        android:label="fragment_market"
+        tools:layout="@layout/fragment_market"/>
+    <fragment
+        android:id="@+id/closePositionFragment"
+        android:name="com.example.bestbuyselltime.ClosePositionFragment"
+        android:label="fragment_closeposition"
+        tools:layout="@layout/fragment_closeposition"/>
 </navigation>

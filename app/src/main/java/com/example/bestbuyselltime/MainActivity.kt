@@ -19,20 +19,8 @@ class MainActivity: AppCompatActivity() {
         val navController = (supportFragmentManager
             .findFragmentById(R.id.fcvMain) as NavHostFragment).navController
         NavigationUI.setupWithNavController(binding.bottomNav, navController)
-            /*
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-         */
-            /* val recyclerView: RecyclerView = findViewById(R.id.rv_history)
-        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, true)
-        recyclerView.adapter = adapter
-        adapter.submitList(listOf(Operation(),Operation(), Operation()))
-        */
-            /* binding.bTools.setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id., MarketFragment())
-                .commit()
-        }
-         */
+        binding.bottomNav.setOnItemReselectedListener {
+            navController.popBackStack()
+            }
         }
     }

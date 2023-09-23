@@ -9,7 +9,7 @@
         android:icon="@drawable/baseline_history_24"
         android:title="History"/>
     <item
-        android:id="@id/instruments"
+        android:id="@id/marketFragment"
         android:icon="@drawable/baseline_build_24"
         android:title="Instruments"/>
 </menu>
