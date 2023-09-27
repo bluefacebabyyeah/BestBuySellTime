@@ -8,3 +8,7 @@ data class Candle (
     val oldPrice: Double,
     val newPrice: Double
 )
+{
+    val diffPrice = newPrice-oldPrice
+    val diffPricePercent = diffPrice*100/oldPrice
+}

@@ -28,5 +28,9 @@
         android:id="@+id/closePositionFragment"
         android:name="com.example.bestbuyselltime.ClosePositionFragment"
         android:label="fragment_closeposition"
-        tools:layout="@layout/fragment_closeposition"/>
+        tools:layout="@layout/fragment_closeposition">
+        <argument
+            android:name="operation"
+            app:argType="com.example.bestbuyselltime.Operation" />
+    </fragment>
 </navigation>
