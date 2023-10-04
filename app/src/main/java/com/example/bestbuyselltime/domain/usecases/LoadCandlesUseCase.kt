@@ -1,6 +1,9 @@
-package com.example.bestbuyselltime
+package com.example.bestbuyselltime.domain.usecases
 
-class LoadCandlesUseCase {
+import com.example.bestbuyselltime.domain.models.Candle
+import javax.inject.Inject
+
+class LoadCandlesUseCase @Inject constructor(){
     fun getList() = listOf(
         Candle(1,1.0,2.0),
         Candle(2,2.0,3.0),

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/historyFragment2"
-        android:name="com.example.bestbuyselltime.HistoryFragment"
+        android:name="com.example.bestbuyselltime.ui.history.HistoryFragment"
         android:label="fragment_market"
         tools:layout="@layout/fragment_history">
         <action
@@ -16,21 +16,21 @@
     </fragment>
     <fragment
         android:id="@+id/mainFragment3"
-        android:name="com.example.bestbuyselltime.MainFragment"
+        android:name="com.example.bestbuyselltime.ui.main.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main"/>
     <fragment
         android:id="@+id/marketFragment"
-        android:name="com.example.bestbuyselltime.MarketFragment"
+        android:name="com.example.bestbuyselltime.ui.market.MarketFragment"
         android:label="fragment_market"
         tools:layout="@layout/fragment_market"/>
     <fragment
         android:id="@+id/closePositionFragment"
-        android:name="com.example.bestbuyselltime.ClosePositionFragment"
+        android:name="com.example.bestbuyselltime.ui.closeposition.ClosePositionFragment"
         android:label="fragment_closeposition"
         tools:layout="@layout/fragment_closeposition">
         <argument
             android:name="operation"
-            app:argType="com.example.bestbuyselltime.Operation" />
+            app:argType="com.example.bestbuyselltime.domain.models.Operation" />
     </fragment>
 </navigation>

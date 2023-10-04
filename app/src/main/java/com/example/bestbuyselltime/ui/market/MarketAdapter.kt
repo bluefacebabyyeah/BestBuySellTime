@@ -1,14 +1,15 @@
-package com.example.bestbuyselltime
+package com.example.bestbuyselltime.ui.market
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewbinding.ViewBinding
+import com.example.bestbuyselltime.R
 import com.example.bestbuyselltime.databinding.ItemCandleBinding
+import com.example.bestbuyselltime.domain.models.Candle
+import com.example.bestbuyselltime.util.formatAsDate
 
 
 class MarketAdapter() : ListAdapter<Candle, MarketAdapter.MyViewHolder>(

@@ -1,4 +1,4 @@
-package com.example.bestbuyselltime
+package com.example.bestbuyselltime.util
 
 import android.os.Build
 import java.time.LocalDateTime
@@ -14,5 +14,4 @@ fun Long.formatAsDate(pattern: String): String {
     } else {
         return ""
     }
-
 }

@@ -1,14 +1,14 @@
-package com.example.bestbuyselltime
+package com.example.bestbuyselltime.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
+import com.example.bestbuyselltime.R
 import com.example.bestbuyselltime.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainActivity: AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
     // val adapter = AdapterRvHistory()

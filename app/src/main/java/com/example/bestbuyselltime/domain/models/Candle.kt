@@ -1,4 +1,4 @@
-package com.example.bestbuyselltime
+package com.example.bestbuyselltime.domain.models
 
 import java.time.LocalDateTime
 import java.util.Date

@@ -1,4 +1,4 @@
-package com.example.bestbuyselltime
+package com.example.bestbuyselltime.domain.models
 
 import java.io.Serializable
 import java.util.Currency
@@ -6,7 +6,7 @@ import java.util.Date
 
 data class Operation (
     val type: Type,
-    val currency: Currency,
+    val currency: String,
     val price : Double,
     val ratio : Double,
     val date : Date

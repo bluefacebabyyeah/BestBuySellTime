@@ -1,19 +1,23 @@
-package com.example.bestbuyselltime
+package com.example.bestbuyselltime.ui.market
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.viewbinding.ViewBinding
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.example.bestbuyselltime.R
+import com.example.bestbuyselltime.data.repo.OperationRepository
 import com.example.bestbuyselltime.databinding.FragmentMarketBinding
+import com.example.bestbuyselltime.domain.usecases.LoadCandlesUseCase
+import com.example.bestbuyselltime.domain.usecases.OperationUseCase
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MarketFragment: Fragment(R.layout.fragment_market) {
     private val binding by viewBinding(FragmentMarketBinding::bind)
     private val adapter = MarketAdapter()
-    val viewModel = MarketViewModel(LoadCandlesUseCase(), OperationUseCase)
+    private val viewModel by viewModels<MarketViewModel>()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.rvCandles.adapter = adapter
