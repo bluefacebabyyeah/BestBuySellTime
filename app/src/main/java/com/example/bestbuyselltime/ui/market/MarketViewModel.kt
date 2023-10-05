@@ -22,8 +22,10 @@ class MarketViewModel @Inject constructor(
     val candles = MutableLiveData<List<Candle>>(emptyList())
     val currentPrice = MutableLiveData<Double>()
     fun loadCandles(){
-        candles.value = getCandleUseCase.getList()
-        currentPrice.value = candles.value!!.last().newPrice
+        viewModelScope.launch {
+            candles.value = getCandleUseCase.getList()
+            currentPrice.value = candles.value!!.lastOrNull()?.newPrice
+        }
     }
     fun buy(price:Double, count: String) {
         viewModelScope.launch {

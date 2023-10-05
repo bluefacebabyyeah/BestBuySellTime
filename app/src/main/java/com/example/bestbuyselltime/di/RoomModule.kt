@@ -3,6 +3,7 @@ package com.example.bestbuyselltime.di
 import android.content.Context
 import androidx.room.Room
 import com.example.bestbuyselltime.data.AppDatabase
+import com.example.bestbuyselltime.data.dao.CandleDao
 import com.example.bestbuyselltime.data.dao.OperationDao
 import dagger.Module
 import dagger.Provides
@@ -26,4 +27,9 @@ class RoomModule {
     @Singleton
     fun provideOperationDao(db: AppDatabase): OperationDao =
         db.getOperationDao()
+
+    @Provides
+    @Singleton
+    fun provideCandlesDao(db: AppDatabase) : CandleDao =
+        db.getCandleDao()
 }

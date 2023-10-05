@@ -1,12 +1,11 @@
 package com.example.bestbuyselltime.domain.models
 
-import java.time.LocalDateTime
 import java.util.Date
 
-data class Candle (
-    val date: Long,
+data class Candle(
+    val date : Long,
     val oldPrice: Double,
-    val newPrice: Double
+    val newPrice: Double,
 )
 {
     val diffPrice = newPrice-oldPrice
