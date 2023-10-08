@@ -18,5 +18,4 @@ data class CandleEntity(
             oldPrice = oldPrice,
             newPrice = newPrice,
         )
-
 }
